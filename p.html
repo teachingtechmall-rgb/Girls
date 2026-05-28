@@ -3,6 +3,17 @@
 <head>
 
 
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "d9559fcf-b402-45a6-86e6-ecf454fa6262",
+    });
+  });
+</script>
+  
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-89L6D5ZK18"></script>
 <script>
