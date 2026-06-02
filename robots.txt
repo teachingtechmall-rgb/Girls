@@ -1,0 +1,15 @@
+# Dosti Zone Robots
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: *
+Allow: /
+
+Disallow: /search
+Disallow: /*?m=1
+
+Sitemap: https://dostizone.vercel.app/sitemap.xml
