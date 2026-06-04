@@ -111,6 +111,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        html { scroll-behavior: smooth; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
         .ad-box { min-height: 90px; background: #1e293b; border: 2px dashed #475569; position: relative; }
         .ad-box::before { content: "SPONSORED ADVERTISEMENT"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #64748b; font-size: 11px; font-weight: bold; letter-spacing: 1px; }
@@ -120,7 +121,29 @@
         .faq-peer:checked ~ label i { transform: rotate(180deg); }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased">
+<body class="bg-slate-50 text-slate-800 antialiased pb-20 sm:pb-6">
+
+    <!-- TOP STICKY HEADER -->
+    <header class="sticky top-0 left-0 right-0 bg-white border-b border-slate-200 shadow-sm z-50">
+        <div class="max-w-3xl mx-auto px-4 h-14 flex items-center justify-between">
+            <!-- Left Side Logo Text -->
+            <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-pink-500 animate-pulse"></span>
+                <span class="text-lg font-black tracking-tight bg-gradient-to-r from-pink-600 to-indigo-600 bg-clip-text text-transparent">Active Girls</span>
+            </div>
+            <!-- Right Side Action Menu & Categories Links -->
+            <div class="flex items-center gap-4">
+                <nav class="hidden md:flex items-center gap-4 text-xs font-semibold text-slate-600">
+                    <a href="#pakistan-grid" class="hover:text-pink-600 transition">Pakistani Profiles</a>
+                    <a href="#indian-grid" class="hover:text-pink-600 transition">Indian Profiles</a>
+                    <a href="#faq-section" class="hover:text-pink-600 transition">FAQs</a>
+                </nav>
+                <a href="https://omg10.com/4/10960260" target="_blank" class="bg-pink-600 hover:bg-pink-700 text-white font-bold text-xs px-3 py-1.5 rounded-full shadow-xs transition flex items-center gap-1">
+                    <i class="fa-solid fa-fire text-[10px]"></i> Join Group
+                </a>
+            </div>
+        </div>
+    </header>
 
     <main class="max-w-3xl mx-auto px-4 py-6 bg-white shadow-sm border border-slate-200 rounded-md my-4">
         
@@ -134,6 +157,38 @@
         <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 leading-tight mb-4">
              Active Sexy Girl WhatsApp Number for Friendship in Pakistan Safely in 2026
         </h1>
+
+        <!-- PREMIUM TABLE OF CONTENTS (TOC) -->
+        <div id="table-of-contents" class="mb-6 bg-gradient-to-r from-slate-50 to-pink-50/30 border border-slate-200 rounded-xl p-4 sm:p-5 shadow-xs">
+            <div class="flex items-center gap-2.5 mb-3 border-b border-slate-200 pb-2">
+                <div class="w-7 h-7 rounded-lg bg-pink-500 flex items-center justify-center text-white text-xs shadow-sm">
+                    <i class="fa-solid fa-list-ul"></i>
+                </div>
+                <h3 class="text-sm sm:text-base font-bold text-slate-800 tracking-tight">Quick Navigation Index</h3>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
+                <a href="#pakistan-grid" class="flex items-center gap-2 p-2 rounded-lg bg-white border border-slate-100 hover:border-pink-300 hover:bg-pink-50/50 text-slate-700 font-medium transition shadow-2xs">
+                    <span class="w-1.5 h-1.5 rounded-full bg-pink-500"></span>
+                    <span>Pakistani Sexy Girls Panel</span>
+                </a>
+                <a href="#safety-section" class="flex items-center gap-2 p-2 rounded-lg bg-white border border-slate-100 hover:border-pink-300 hover:bg-pink-50/50 text-slate-700 font-medium transition shadow-2xs">
+                    <span class="w-1.5 h-1.5 rounded-full bg-pink-500"></span>
+                    <span>Real Call Girls Connection Strategy</span>
+                </a>
+                <a href="#indian-grid" class="flex items-center gap-2 p-2 rounded-lg bg-white border border-slate-100 hover:border-pink-300 hover:bg-pink-50/50 text-slate-700 font-medium transition shadow-2xs">
+                    <span class="w-1.5 h-1.5 rounded-full bg-pink-500"></span>
+                    <span>Indian Premium Profiles List</span>
+                </a>
+                <a href="#guide-section" class="flex items-center gap-2 p-2 rounded-lg bg-white border border-slate-100 hover:border-pink-300 hover:bg-pink-50/50 text-slate-700 font-medium transition shadow-2xs">
+                    <span class="w-1.5 h-1.5 rounded-full bg-pink-500"></span>
+                    <span>Step-by-Step Safe Chat Guide</span>
+                </a>
+                <a href="#faq-section" class="flex items-center gap-2 p-2 rounded-lg bg-white border border-slate-100 hover:border-pink-300 hover:bg-pink-50/50 text-slate-700 font-medium transition shadow-2xs sm:col-span-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-pink-500"></span>
+                    <span>Frequently Asked Questions (FAQs)</span>
+                </a>
+            </div>
+        </div>
 
         <p class="text-base sm:text-lg text-slate-700 leading-relaxed mb-6 font-normal">
             Sexy Girl Whatsapp Number dhundh rahe ho for friendship agar han, to aap sahi jagah par Aaye hain hamari team aapko 2026 mein Online friendship karne ke liye unlimited Beautiful sexy girl whatsapp numbers ki latest 2026 ki list Denge.<br><br> 
@@ -150,7 +205,7 @@
             <div class="ad-box w-full h-[100px] rounded"></div>
         </div>
 
-        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+        <h2 id="pakistan-grid" class="text-xl sm:text-2xl font-bold text-slate-900 mb-3 flex items-center gap-2 scroll-mt-16">
             <span class="text-indigo-600">#1</span> Pakistani Sexy Girl WhatsApp Number for Friendship Community Platform
         </h2>
         
@@ -383,7 +438,7 @@
 </div>
 </div>          
 
-        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mt-6 mb-3">
+        <h2 id="safety-section" class="text-xl sm:text-2xl font-bold text-slate-900 mt-6 mb-3 scroll-mt-16">
             Real Call Girl WhatsApp Number 2026 : Safe Connection Strategies
         </h2>
         <p class="text-slate-700 text-sm sm:text-base mb-4 leading-relaxed">
@@ -395,7 +450,7 @@
         </div>
 
         <!-- INDIAN PROFILES GRID WRAPPER -->
-        <div class="grid grid-cols-2 gap-4 mb-6">
+        <div id="indian-grid" class="grid grid-cols-2 gap-4 mb-6 scroll-mt-16">
             <!-- INDIAN CARD 1 -->
             <div class="bg-white p-3 rounded-lg shadow-sm border border-slate-200">
                 <img src="images (12).jpeg" class="w-full h-48 sm:h-72 object-cover rounded-md mb-2">
@@ -531,7 +586,7 @@
           </p>
         </section>
 
-        <section class="mb-6">
+        <section id="safety-tips" class="mb-6 scroll-mt-16">
           <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mb-2">Safety Tips Before Contacting Any Girl on WhatsApp</h2>
           <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
             Jab bhi tum kisi unknown girl se WhatsApp par contact karo to hamesha apni personal details jaise CNIC, address ya bank info share na karo. Pehle us profile ko thoda verify karo aur fake accounts se bach ke raho. Respectful aur normal conversation rakho, agar koi suspicious ya uncomfortable lage to turant block ya report kar do. Online safety ko hamesha apni first priority banao.
@@ -542,7 +597,7 @@
             <div class="ad-box w-full h-[90px] rounded"></div>
         </div>
 
-        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mt-6 mb-3">
+        <h2 id="guide-section" class="text-xl sm:text-2xl font-bold text-slate-900 mt-6 mb-3 scroll-mt-16">
             Smart Strategy: How to Connect with Girls on WhatsApp Safely (Step-by-Step Guide)
         </h2>
         
@@ -577,7 +632,7 @@
         <!-- ================================================================= -->
         <!-- PREMIUM FAQ & CONCLUSION ACCORDION SECTION -->
         <!-- ================================================================= -->
-        <div class="my-8 border-t border-slate-200 pt-6">
+        <div id="faq-section" class="my-8 border-t border-slate-200 pt-6 scroll-mt-16">
             <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 mb-6 flex items-center gap-2">
                 <i class="fa-solid fa-circle-question text-indigo-600"></i> Frequently Asked Questions (FAQs)
             </h2>
@@ -645,7 +700,7 @@
             </div>
 
             <!-- Premium Conclusion Box Inside Structure -->
-            <div class="mt-8 p-6 bg-gradient-to-br from-slate-900 to-indigo-950 rounded-xl text-white shadow-lg border border-slate-800">
+            <div id="about-section" class="mt-8 p-6 bg-gradient-to-br from-slate-900 to-indigo-950 rounded-xl text-white shadow-lg border border-slate-800 scroll-mt-16">
                 <h3 class="text-lg font-bold mb-2 flex items-center gap-2 text-indigo-400">
                     <i class="fa-solid fa-flag"></i> Final Conclusion
                 </h3>
@@ -658,11 +713,11 @@
         <!-- Premium Legal Links Footer -->
         <div class="border-t border-slate-200 pt-6 text-center">
             <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs font-medium text-slate-500 mb-4">
-                <a href="https://dostizone.vercel.app/About-Us.html" class="hover:text-indigo-600 transition-colors flex items-center gap-1"><i class="fa-solid fa-circle-info text-[10px]"></i> About Us</a>
-                <a href="https://dostizone.vercel.app/Contact-Us.html" class="hover:text-indigo-600 transition-colors flex items-center gap-1"><i class="fa-solid fa-envelope text-[10px]"></i> Contact Us</a>
-                <a href="https://dostizone.vercel.app/Privacy-Policy.html" class="hover:text-indigo-600 transition-colors flex items-center gap-1"><i class="fa-solid fa-shield-halved text-[10px]"></i> Privacy Policy</a>
-                <a href="https://dostizone.vercel.app/Disclaimer.html" class="hover:text-indigo-600 transition-colors flex items-center gap-1"><i class="fa-solid fa-triangle-exclamation text-[10px]"></i> Disclaimer</a>
-                <a href="https://dostizone.vercel.app/Terms-Conditions.html" class="hover:text-indigo-600 transition-colors flex items-center gap-1"><i class="fa-solid fa-file-contract text-[10px]"></i> Terms & Conditions</a>
+                <a href="#about-section" class="hover:text-indigo-600 transition-colors flex items-center gap-1"><i class="fa-solid fa-circle-info text-[10px]"></i> About Us</a>
+                <a href="#" class="hover:text-indigo-600 transition-colors flex items-center gap-1"><i class="fa-solid fa-envelope text-[10px]"></i> Contact Us</a>
+                <a href="#" class="hover:text-indigo-600 transition-colors flex items-center gap-1"><i class="fa-solid fa-shield-halved text-[10px]"></i> Privacy Policy</a>
+                <a href="#" class="hover:text-indigo-600 transition-colors flex items-center gap-1"><i class="fa-solid fa-triangle-exclamation text-[10px]"></i> Disclaimer</a>
+                <a href="#" class="hover:text-indigo-600 transition-colors flex items-center gap-1"><i class="fa-solid fa-file-contract text-[10px]"></i> Terms & Conditions</a>
             </div>
             <p class="text-[11px] text-slate-400 font-mono tracking-tight">
                 &copy; 2026 Dostizone Network. All Rights Reserved. Clean & Safe Social Interaction Engine.
@@ -671,14 +726,31 @@
 
     </main>
 
-    <!-- Fixed Sticky Action Bar Base -->
-    <div class="sticky bottom-0 left-0 right-0 bg-slate-900 border-t border-slate-700 shadow-xl py-2 px-4 z-50">
-        <div class="max-w-xl mx-auto flex items-center justify-between gap-3">
-            <div class="hidden sm:block text-xs text-slate-300 font-medium">
-                🔥 Quick Link: Open 2026 Online Directory Now
-            </div>
-            <a href="https://omg10.com/4/10960260" target="_blank" class="w-full sm:w-auto bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 text-center font-bold text-xs px-4 py-2 rounded shadow-md hover:scale-[1.02] transition">
-                ⚡ Sexy Girls WhatsApp groups
+    <!-- FIXED APP-STYLE BOTTOM STICKY NAVIGATION -->
+    <div class="fixed bottom-0 left-0 right-0 bg-slate-950/95 backdrop-blur-md border-t border-slate-800 shadow-2xl py-2 px-6 z-50 md:hidden">
+        <div class="max-w-xl mx-auto flex items-center justify-between">
+            <!-- Home Button Links -->
+            <a href="#" class="flex flex-col items-center gap-0.5 text-slate-400 hover:text-pink-500 active:text-pink-500 transition group">
+                <div class="w-10 h-6 flex items-center justify-center rounded-full group-hover:bg-slate-800 transition">
+                    <i class="fa-solid fa-house text-base"></i>
+                </div>
+                <span class="text-[10px] font-bold tracking-wide uppercase">Home</span>
+            </a>
+            
+            <!-- Category Jump Button Links -->
+            <a href="#table-of-contents" class="flex flex-col items-center gap-0.5 text-slate-400 hover:text-pink-500 active:text-pink-500 transition group">
+                <div class="w-10 h-6 flex items-center justify-center rounded-full group-hover:bg-slate-800 transition">
+                    <i class="fa-solid fa-layer-group text-base"></i>
+                </div>
+                <span class="text-[10px] font-bold tracking-wide uppercase">Category</span>
+            </a>
+            
+            <!-- About Us Jump Button Links -->
+            <a href="#about-section" class="flex flex-col items-center gap-0.5 text-slate-400 hover:text-pink-500 active:text-pink-500 transition group">
+                <div class="w-10 h-6 flex items-center justify-center rounded-full group-hover:bg-slate-800 transition">
+                    <i class="fa-solid fa-circle-user text-base"></i>
+                </div>
+                <span class="text-[10px] font-bold tracking-wide uppercase">About Us</span>
             </a>
         </div>
     </div>
