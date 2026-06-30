@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DostiZone Safety Center — Verified Trust & Moderation Hub</title>
+<meta name="description" content="DostiZone Official Safety Center. Remove your number, report misuse, or get help — verified, moderated, and built for your privacy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1B2430;
+    --paper:#FBF8F3;
+    --trust:#1F4B47;      /* deep teal — verification, security */
+    --trust-light:#2E6B64;
+    --thread:#D96C4E;     /* warm coral — the "dosti" thread/accent */
+    --thread-soft:#F3DCD2;
+    --line:#E3DCD0;
+    --muted:#6B7280;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Manrope', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit;}
+
+  /* ---- thread motif: a dotted connecting line used as the signature device ---- */
+  .thread{
+    position:relative;
+  }
+  .thread::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:2px;
+    background-image:radial-gradient(circle, var(--thread) 1.5px, transparent 1.5px);
+    background-size:2px 14px;
+    transform:translateX(-50%);
+    opacity:0.35;
+  }
+
+  header{
+    padding:28px 6vw;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid var(--line);
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.15rem;
+  }
+  .brand .mark{
+    width:30px; height:30px;
+    border-radius:50%;
+    background:var(--trust);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .brand .mark svg{width:16px; height:16px;}
+  .badge{
+    font-size:0.72rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--trust);
+    border:1px solid var(--trust);
+    border-radius:999px;
+    padding:5px 12px;
+    font-weight:700;
+  }
+
+  .hero{
+    padding:72px 6vw 56px;
+    max-width:880px;
+    margin:0 auto;
+    text-align:center;
+  }
+  .eyebrow{
+    font-size:0.78rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--thread);
+    font-weight:700;
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:clamp(2.1rem, 4.5vw, 3.4rem);
+    line-height:1.12;
+    margin-bottom:20px;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--trust);
+  }
+  .hero p{
+    color:var(--muted);
+    font-size:1.05rem;
+    max-width:560px;
+    margin:0 auto;
+  }
+
+  .stats{
+    display:flex;
+    justify-content:center;
+    gap:48px;
+    margin-top:46px;
+    flex-wrap:wrap;
+  }
+  .stat{text-align:center;}
+  .stat .num{
+    font-family:'Fraunces', serif;
+    font-size:1.8rem;
+    color:var(--trust);
+    font-weight:600;
+  }
+  .stat .label{
+    font-size:0.78rem;
+    color:var(--muted);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+  }
+
+  /* ---- the two-path section ---- */
+  .paths{
+    max-width:1040px;
+    margin:64px auto 0;
+    padding:0 6vw 90px;
+  }
+  .paths-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    border:1px solid var(--line);
+    border-radius:20px;
+    overflow:hidden;
+    background:var(--card);
+  }
+  @media (max-width:760px){
+    .paths-grid{grid-template-columns:1fr;}
+    .paths-grid .col:first-child{border-bottom:1px solid var(--line);}
+    .paths-grid .col:not(:first-child){border-left:none !important;}
+  }
+  .col{
+    padding:46px 38px;
+    position:relative;
+  }
+  .col:nth-child(2){border-left:1px solid var(--line);}
+  .col .tag{
+    display:inline-block;
+    font-size:0.7rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    font-weight:700;
+    padding:4px 10px;
+    border-radius:6px;
+    margin-bottom:18px;
+  }
+  .col.remove .tag{background:var(--thread-soft); color:var(--thread);}
+  .col.report .tag{background:#E7EEEC; color:var(--trust);}
+  .col h2{font-size:1.55rem; margin-bottom:12px;}
+  .col p.desc{color:var(--muted); font-size:0.96rem; margin-bottom:26px;}
+  .col ul{
+    list-style:none;
+    margin-bottom:30px;
+  }
+  .col ul li{
+    font-size:0.9rem;
+    color:var(--ink);
+    padding-left:20px;
+    position:relative;
+    margin-bottom:10px;
+  }
+  .col ul li::before{
+    content:"";
+    position:absolute;
+    left:0; top:7px;
+    width:7px; height:7px;
+    border-radius:50%;
+    background:var(--thread);
+  }
+  .col.report ul li::before{background:var(--trust);}
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:13px 24px;
+    border-radius:10px;
+    font-weight:700;
+    font-size:0.92rem;
+    text-decoration:none;
+    transition:transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn:focus-visible{outline:3px solid var(--thread); outline-offset:3px;}
+  .col.remove .btn{background:var(--thread); color:#fff; box-shadow:0 8px 18px -8px rgba(217,108,78,0.55);}
+  .col.report .btn{background:var(--trust); color:#fff; box-shadow:0 8px 18px -8px rgba(31,75,71,0.55);}
+
+  .col .turnaround{
+    margin-top:18px;
+    font-size:0.78rem;
+    color:var(--muted);
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+  .col .turnaround svg{width:14px; height:14px; flex-shrink:0;}
+
+  /* ---- trust strip ---- */
+  .trust-strip{
+    background:var(--trust);
+    color:#EFEAE0;
+    padding:54px 6vw;
+  }
+  .trust-strip-inner{
+    max-width:980px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:36px;
+  }
+  @media (max-width:700px){.trust-strip-inner{grid-template-columns:1fr;}}
+  .trust-item h3{
+    font-family:'Manrope', sans-serif;
+    font-weight:700;
+    font-size:1rem;
+    margin-bottom:8px;
+    color:#fff;
+  }
+  .trust-item p{
+    font-size:0.88rem;
+    color:#C9D6D3;
+  }
+
+  footer{
+    padding:34px 6vw;
+    text-align:center;
+    font-size:0.8rem;
+    color:var(--muted);
+    border-top:1px solid var(--line);
+  }
+  footer a{color:var(--trust); font-weight:600; text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <span class="mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#FBF8F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z"/></svg>
+    </span>
+    DostiZone
+  </div>
+  <span class="badge">Official Safety Center</span>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">Verified · Moderated · Built for trust</div>
+  <h1>Your number, <em>your control.</em></h1>
+  <p>DostiZone Safety Center har request ko manually verify karta hai. Apna number remove karwana ho ya kisi galat profile ki shikayat — yahan se seedha humari moderation team tak pahunchti hai.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="num">24–48h</div><div class="label">Response Time</div></div>
+    <div class="stat"><div class="num">100%</div><div class="label">Manual Review</div></div>
+    <div class="stat"><div class="num">2</div><div class="label">Verified Channels</div></div>
+  </div>
+</section>
+
+<section class="paths thread">
+  <div class="paths-grid">
+
+    <div class="col remove">
+      <span class="tag">Privacy</span>
+      <h2>Remove my number</h2>
+      <p class="desc">Agar aap apna number DostiZone se hatwana chahte hain — ya kisi ne bina permission ke aapka number daal diya hai.</p>
+      <ul>
+        <li>Sirf number ka asli owner request kar sakta hai</li>
+        <li>Team aapko call/WhatsApp pe verify karegi</li>
+        <li>Verify hote hi number turant hata diya jaata hai</li>
+      </ul>
+      <a class="btn" href="https://forms.gle/exPnSYwTEi2GKSwq5" target="_blank" rel="noopener">
+        Open Removal Form
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+      <div class="turnaround">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--thread)" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        Processed within 24–48 hours
+      </div>
+    </div>
+
+    <div class="col report">
+      <span class="tag">Safety</span>
+      <h2>Report misuse</h2>
+      <p class="desc">Fake number, harassment, spam, ya kisi bhi tarah ka inappropriate content nazar aaye to humein batayein.</p>
+      <ul>
+        <li>Har report DostiZone team manually check karti hai</li>
+        <li>Aapki identity poori tarah confidential rehti hai</li>
+        <li>Zaroorat padne par turant action liya jaata hai</li>
+      </ul>
+      <a class="btn" href="https://forms.gle/3KniUpMKAWWn4DQp8" target="_blank" rel="noopener">
+        Open Report Form
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+      <div class="turnaround">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--trust)" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        Reviewed within 24–48 hours
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="trust-strip">
+  <div class="trust-strip-inner">
+    <div class="trust-item">
+      <h3>Manual verification</h3>
+      <p>Koi bhi request automatically process nahi hoti — har case ek insaan dwara verify kiya jaata hai.</p>
+    </div>
+    <div class="trust-item">
+      <h3>Confidential by default</h3>
+      <p>Reports aur removal requests ki details kabhi public share nahi ki jaati.</p>
+    </div>
+    <div class="trust-item">
+      <h3>Consent-first platform</h3>
+      <p>DostiZone par sirf wahi number dikhte hain jo users ne khud, apni marzi se share kiye hain.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; DostiZone — Official Safety Center · Questions? Reach out via either form above.
+</footer>
+
+</body>
+</html>
